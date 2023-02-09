@@ -195,11 +195,11 @@ function esPrimo(numero) {
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
   // Tu código:
-  if (typeof numero === 'number') {
+  if (typeof numero === 'number' && Number.isInteger(numero)) {
     if (numero <= 1)      
       return false; //return 'Ingrese un valor válido';
     for (let i = 2; i <= numero - 1; i++) {
-      if (numero % i == 0)
+      if (numero % i === 0)
         return false;
     }
     return true;
