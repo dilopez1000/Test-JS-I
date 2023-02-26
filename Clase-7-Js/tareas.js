@@ -11,3 +11,11 @@ function imprimir() {
 }
 
 imprimir();
+
+//RESPUESTA:
+// Se ejecutan en orden secuencial (por ser instrucciones síncronas) las sentencias console.log(1); y luego console.log (4);
+// Luego la función retorna "undefined" por ser una función con retorno void.
+
+// Luego de ello se ejecutan las sentencias asíncronas en el siguiente orden:
+// 1° setTimeout(function() {console.log(3); }, 0);
+// 2° setTimeout (function() {console.log(2); }, 1000); // esta se ejecuta en segundo orden debido a que el intévalo de ms. es mayor
